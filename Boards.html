@@ -12,6 +12,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- This title will appear in the browser tab.  Make it short and descriptive -->
     <title>CSC102 Index</title>
+    <!-- There are 3 ways to include CSS in our page
+     * External CSS - the CSS styles are in a separate .CSS file - best practice
+       Embedded CSS - the CSS styles apply to just 1 page - <style  </style? ; okay to use sparingly
+       Inline CSS - set styles on a particular HTML element - very time consuming to update; try to avoid at all costs-->
+<!-- Embedded CSS - This only applies to the current page -->
+    <style>
+        /* There are 3 ways to set up CSS selectors - HTML element, such as body;
+        custom class - .redText
+        by ID of the element #memeImage
+         */
+
+        /* body selector applies globally to the whole page */
+        body{
+            /* background-color is the back color of the webpage */
+            background-color: rgb(41, 115, 226);
+            /* color is the text color */
+            color: rgb(215, 214, 214);
+    
+        header{
+            padding: 20px;
+
+    }
+    
+    }
+    h1{
+        color: rgb(1, 1, 90)
+    }
+    </style>
+
+     <!-- add a link to our css file -->
+     <link rel="stylesheet" href="Main.css">
 </head>
 
 <!-- Everything we want to show to the user goes in the body section -->
@@ -23,8 +54,10 @@
         <h1>Welcome to my CSC102 page.</h1>
         <!-- This is the navigation menu section -->
             <nav>
+                
                 <!-- The a tag is the anchor tag - it creates a hyperlink -->
                 <a href="Index.html">Home</a> &nbsp;
+                <br>
                 <a href="Boards.html">Boards</a>
             </nav>
     </header>
@@ -61,4 +94,4 @@
 <!-- Make sure the closing body tag is at the bottom of the page -->
 </body>
 <!-- Closing html tag should be at the end of every file -->
-</html> 
+</html>
