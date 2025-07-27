@@ -1,0 +1,167 @@
+<!-- Aaron Jones 8 Jul 2025 -->
+<!-- Tells the browser this is an HTML5 compatible page -->
+<!DOCTYPE html>
+<!-- Required html opening tag -->
+<html lang="en">
+<!-- The head section has info for the browser and search engine
+ Do not include an content for the user in the head section -->
+<head>
+    <!-- Any character may be in the page -->
+    <meta charset="UTF-8">
+    <!-- This is for mobile devices to show the page better -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This title will appear in the browser tab.  Make it short and descriptive -->
+    <title>CSC102 Index</title>
+</head>
+
+<!-- Everything we want to show to the user goes in the body section -->
+<body>
+    <!-- Create a header section -->
+     <header>
+        <!-- This is the navigation menu section -->
+        <nav>
+            <!-- The a tag is the anchor tag - it creates a hyperlink -->
+            <a href="Index.html">Home</a> &nbsp;
+            <a href="Boards.html">Boards</a>
+        </nav>
+
+     </header>
+
+    <!-- Add header text There should be 1 and only 1 h1 tag on a page.-->
+    <h1>Here are the basics of programming.</h1>
+
+    <h2>Variables</h2>
+
+    <script>
+        // This is a single line comment in JavaScript
+        /* This is a multiline comment in JavaScript */
+
+        // Let's create out first variable
+        var firstName = "Aaron";
+        
+        var lastName = "Jones";
+
+        // Do NOT use this method
+        middlename = "Stephen";
+    </script>
+
+    <h2>Functions</h2>
+
+    <script>
+        
+        // this is the JavaScript function definition; we need to use the keyword function
+        // functions are awesome - you write code 1 time and can reuse it throughout your program
+        // function name should usually be some sort of action
+        // always include th () - sometimes there will be variable(s) in between the () or they may be empty
+        // always make sure there are a matching set of curly braces { }
+        function runCalc(){
+            // whatever code is in between the curly brace
+            // we will create a variable called num1, and we will
+            // JavaScript should assume that this is a numberic
+            var num1 = 0;
+            var num2 = 0;
+
+            // we want to promt the user for a number, using the built in JavaScript prompt function
+            // the prompt function takes an argument (variable) - the text that will be shown to the user with the prompt
+            // the prompt funtion returns the value that the user entered in
+            // set the num1 variable equal to the value the user entered in
+
+            do{
+            
+                // make the user enter a number; this loop will run until a number is entered
+                num1 = prompt("Please enter number 1: "); // Most lines of JavaScript need a ; at the end
+                // if isNotaNumber is true (they entered text) or the user entered 0 the loop will keep running
+                }while(isNaN(num1) || num1 == 0); //this ; is mandatory
+            
+
+            // get another number from the user and assign it to the num2 variable
+            num2 = prompt("Please enter number 2 "); //most lines of JavaScript need a ; at the end
+
+            // let's add num1 and num2 together and stroe that value in the total variable
+            //The built in JavaScript function parseInt makes sure that JavaScript treats the num1 and num2 variables as integers (whole numbers)
+            var total = parseInt(num1) + parseInt(num2);
+        
+            // call the build in JavaScript function called alert - this will show a message to the user
+            // it should show our numbers and the total
+            alert("The total of " + num1 + " plus " + " is " + total);
+        }
+        // we have created the function, now we need to call it so that the function code will run
+        // the () are blank because we don't need to pass any information into this function
+        runCalc();
+
+    </script>
+    <h2>Decision Logic (if/else)</h2>
+
+    <script>
+        // creating a variable called age with a default value of 5
+        // 1 equals sign is assignment, the variable on the left is assigned the value on the right      
+
+        var age = 7;
+        // 2 equals signs means check for equality, or deas the value on the left side match the value on the right side
+        if (age == 5){
+            // this code will run if the value of the age variable is 5
+            alert("age=" + age);
+        }
+        // else if will be checked when the iff statemnet does not evalutate to true
+        else if (age == 6){
+            // this code will run if the value of the age variable is 6
+            alert("age=" + age)
+        }
+        // the else statement is a catch-all, it will run if none of the if/else if statements are true
+        else{
+            // this code will run if the value of the age variable is anything other than 5 or 6
+            alert("age was not 5 or 6");
+        }
+
+    </script>
+
+    <h2>Loops</h2>
+    <script>
+        // loops run code repeatedly
+        // they are great for desplaying data
+        // there are 2 basic types of loops - for loop and while loops
+
+        // for loops are generally used when you know how many times you want the code to run
+        // 1st part of our for loop is a count variable, and we are setting it to a default value of 0
+        // 2nd part the condition that for loop will test on each run the loop will run as long as this condition is true
+        // 3rd part is incrementing the counter variable each time the loop runs
+        // i++ is the same thing as i = i + 1
+        for (var i = 0; i < 5; i++){
+            alert("i=" + i);
+
+        }
+
+        // counter variable, set to default value of 0
+        var counter = 0;
+        // while loop will run until the counter is equal to 5
+        while(counter < 5){
+            // display the value of counter in an alart
+            alert("counter=" + counter);
+
+            // increase the value of counter by 1 every time the while loop
+            counter++;
+
+        }
+        // while loops are generally used when you do not know how many times you want the code to run
+
+
+
+    </script>
+
+    <!-- This is the paragraph, by default there will be spacing before and after the p tags. -->
+     <p>
+        
+     </p>
+
+    <!-- Add the footer to the bottom of the page -->
+    <footer>
+        <!-- <br> creates a line -->
+         Aaron S. Jones
+         University of Advancing Technology
+         2625 W Baseling Rd.<br>
+         Tempe, AZ 85283
+    </footer>
+<!-- Make sure the closing body tag is at the bottom of the page -->
+</body>
+<!-- Closing html tag should be at the end of every file -->
+</html>
