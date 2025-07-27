@@ -8,8 +8,26 @@ selector{
 */
 
 body{
-    background-color: rgb(87, 61, 233);
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
+    background-image: url('Background.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+}
+
+background-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* white overlay with 60% opacity */
+    z-index: 1;
+}
+
+content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
 }
 
 nav{
