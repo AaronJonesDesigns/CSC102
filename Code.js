@@ -3,7 +3,6 @@ function playZeblor() {
         window.location.href = "https://www.construct.net/en/free-online-games/zeblor-mystic-journey-doom-78664/play"
     }
 
-
 function validateForm(){
     // get the users first name so we can validate it
     let firstName = document.getElementById("txtFirstName").value;
@@ -20,6 +19,7 @@ function validateForm(){
     // Create a shortcut to the message area (div) in the HTML
     let divMessage = document.getElementById("divMessage");
 
+    // Console logs
     console.log("firstName=" + firstName);
     console.log("lastName=" + lastName);
     console.log("zipCode=" + zipCode);
@@ -30,7 +30,7 @@ function validateForm(){
     if (fullName.length == 1){
         divMessage.innerHTML = "Zeblor needs to validate your data."
     }
-    
+    // Error message for names exceed 20 full name characters
     else if (fullName.length > 20){
         // User gets notified of the error and does not get secret message
         divMessage.innerHTML = "Zeblor can't read big words. Please shorten your name.";
@@ -43,22 +43,18 @@ function validateForm(){
     }
     // Error message for people who forget that they have a last name
     else if (lastName.trim() == ""){
-        divMessage.innerHTML = "Zeblor wonders...what is your last name?";
-            
+        divMessage.innerHTML = "Zeblor wonders...what is your last name?";      
     }
     // if the zip code is not exactly 5 digits long
     else if (zipCode.length != 5){
         // User gets notified of the error and does not get secret message
         divMessage.innerHTML = "Zeblor needs to know what part of the planet you live on (Zip).";
-
     }
     // if we get to this else statement, it means that all of the inputs validated successfully. Give secret message
     else{
         // the inputs validated successfully, show the secret message
         divMessage.innerHTML = "Zeblor has validated your existance!  " + fullName + " you are clear for take off!"
-
     }
-        
     //prevent the form from submitting 
     return false;
 }
