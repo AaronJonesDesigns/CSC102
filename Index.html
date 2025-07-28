@@ -19,42 +19,9 @@
        Inline CSS - set styles on a particular HTML element - very time consuming to update; try to avoid at all costs-->
     <!-- Embedded CSS - This only applies to the current page -->
      
-    <style>
-        /* There are 3 ways to set up CSS selectors - HTML element, such as body;
-        custom class - .redText
-        by ID of the element - #memeImage
-         */
-
-        /* body selector applies globally to the whole page */
-        body{
-            /* background-color is the back color of the webpage */
-            background-color: rgb(41, 115, 226);
-            /* color is the text color */
-            color: rgb(215, 214, 214);
-    
-        header{
-            padding: 20px;
-    }
-    
-    }
-    h1{
-        color: rgb(1, 1, 90)
-        
-    }
-    .redText{
-        color: red;
-    }
-        #memeImage{
-            width: 400px;
-            position:absolute; /* this will allow our image to move around in the future */
-            left: 25%;
-            top: 25%;
-        }
-    </style>
     <!-- add a link to our css file -->
     <link rel="stylesheet" href="Main.css">
 </head>
-
 <!-- Everything we want to show to the user goes in the body section -->
 <body>
     <!-- Create a header section -->
@@ -62,8 +29,7 @@
         <!-- TODO: add header with menu here -->
         <h1>Welcome to my CSC102 page.</h1>
         <!-- This is the navigation menu section -->
-        <nav>
-                
+        <nav>  
             <!-- The a tag is the anchor tag - it creates a hyperlink -->
             <a href="Index.html">Home</a> &nbsp;
             <br>
@@ -77,8 +43,7 @@
     <!-- This is the paragraph, by default there will be spacing before and after the p tags. -->
     <p>
         <img src="memeImage.jpg" id="memeImage">
-    </p>
-
+    </p> 
     <!-- Add the footer to the bottom of the page -->
     <footer>
         <!-- <br> creates a line -->
