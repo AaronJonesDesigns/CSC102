@@ -16,20 +16,6 @@ body{
     height: 100vh;
 }
 
-background-container::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(255, 255, 255, 0.6); /* white overlay with 60% opacity */
-    z-index: 1;
-}
-
-content {
-    position: relative;
-    z-index: 2;
-    padding: 2rem;
-}
-
 nav{
     height: 600px;
     width: 200px;
