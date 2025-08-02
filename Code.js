@@ -1,3 +1,32 @@
+// Variable declaration
+let memeImage = document.getElementById('memeImage');
+let startButton = document.getElementById('startButton');
+let stopButton = document.getElementById('stopButton');
+let defaultTop = 180;
+let defaultLeft = 300;
+let moveInterval;
+
+// Starts memeImage moving to random location once every second.  Also, disables the "Start" button and enables the "Stop" button
+function startMovement(){
+    startButton.disabled = true;
+    stopButton.disabled = false;
+
+    moveInterval = setInterval(function () { 
+    let maxX = window.innerWidth - memeImage.offsetWidth - 1;
+    let maxY = window.innerHeight - memeImage.offsetHeight - 1;
+    memeImage.style.left = Math.ceil(Math.random() * maxX) + 'px';
+    memeImage.style.top = Math.ceil(Math.random() * maxY) + 'px';
+    }, 1000);
+}
+// Stops memeImage movement and resets its position to default
+function stopMovement(){
+    stopButton.disabled = true;
+    startButton.disabled = false;
+
+    clearInterval(moveInterval);
+    memeImage.style.top = defaultTop + 'px';
+    memeImage.style.left = defaultLeft + 'px';
+}
 // JavaScript defining the playZeblor function and directing it to the site where Zeblor can be played.
 function playZeblor() {
         window.location.href = "https://www.construct.net/en/free-online-games/zeblor-mystic-journey-doom-78664/play"

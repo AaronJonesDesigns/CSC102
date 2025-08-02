@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- This title will appear in the browser tab.  Make it short and descriptive -->
     <title>CSC102 Index</title>
-</head>
+
     <!-- There are 3 ways to include CSS in our page
      * External CSS - the CSS styles are in a separate .CSS file - best practice
        Embedded CSS - the CSS styles apply to just 1 page - <style  </style? ; okay to use sparingly
@@ -21,6 +21,7 @@
      
     <!-- add a link to our css file -->
     <link rel="stylesheet" href="Main.css">
+    <!-- add a link to our .js file -->
 </head>
 <!-- Everything we want to show to the user goes in the body section -->
 <body>
@@ -40,11 +41,24 @@
             <a href="strings.html">Login</a>
         </nav>
     </header>
-    <!-- This is the paragraph, by default there will be spacing before and after the p tags. -->
-    <p>
-        <img src="memeImage.jpg" id="memeImage">
-    </p> 
-    <!-- Add the footer to the bottom of the page -->
+
+    <main>
+        <h2>Make the meme dance arond the page</h2>
+        <p>Start the dance!!</p>
+        <button id="startButton" onclick="startMovement()">Start</button>
+        <button id="stopButton" onclick="stopMovement()">Stop</button>
+
+        <div id="divController"></div>
+
+        <!-- This is the paragraph, by default there will be spacing before and after the p tags. -->
+        <p>
+            <img src="memeImage.jpg" id="memeImage">
+        </p> 
+        <!-- Add the footer to the bottom of the page -->
+    </main>
+    
+    <script src="Code.js"></script>
+    
     <footer>
         <!-- <br> creates a line -->
         Aaron S. Jones <br>

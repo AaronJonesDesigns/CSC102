@@ -30,7 +30,12 @@ footer{
 }
 
 #memeImage{
-    margin-right: 100px;
+      position: absolute;
+      top: 180px;
+      left: 300px;
+      width: 400px;
+      transition: top 0.3s, left 0.3s;
+
 }
 
 h1{
