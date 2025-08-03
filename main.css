@@ -14,6 +14,8 @@ body{
     background-position: center;
     position: relative;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 nav{
@@ -27,17 +29,22 @@ nav{
 footer{
     text-align: center;
     margin-right: 200px;
+    position: fixed;
+    bottom: 0;
+    width: 100%
 }
 
+/* <img src="memeImage.jpg" id="memeImage"> */
 #memeImage{
-      position: absolute;
-      top: 180px;
-      left: 300px;
-      width: 400px;
-      transition: top 0.3s, left 0.3s;
-
+    position: absolute;
+    top: 220px;
+    left: 300px;
+    width: 400px;
+     transition: top 0.3s, left 0.3s;
 }
 
 h1{
     text-align: center;
+    padding: 20px;
+    margin: 0;
 }

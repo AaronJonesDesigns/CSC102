@@ -1,29 +1,39 @@
 // Variable declaration
-let memeImage = document.getElementById('memeImage');
-let startButton = document.getElementById('startButton');
-let stopButton = document.getElementById('stopButton');
-let defaultTop = 180;
+let memeImage = document.getElementById('memeImage')
+// default location variable allows the stopMovement function to move the image back to the starting top position
+let defaultTop = 220;
+// default location variable allows the stopMovement function to move the image back to the starting left position
 let defaultLeft = 300;
-let moveInterval;
+let intervalID = 0;
 
 // Starts memeImage moving to random location once every second.  Also, disables the "Start" button and enables the "Stop" button
 function startMovement(){
-    startButton.disabled = true;
-    stopButton.disabled = false;
-
-    moveInterval = setInterval(function () { 
-    let maxX = window.innerWidth - memeImage.offsetWidth - 1;
-    let maxY = window.innerHeight - memeImage.offsetHeight - 1;
-    memeImage.style.left = Math.ceil(Math.random() * maxX) + 'px';
-    memeImage.style.top = Math.ceil(Math.random() * maxY) + 'px';
-    }, 1000);
+    // set it up so that we cannot click on the start button
+    document.getElementById("startButton").disabled = true;
+    document.getElementById("stopButton").disabled = false;
+    
+    // in place of the getRandomNumber function
+    intervalID = setInterval(function () {
+    // sets max left value to the limits of the viewable screen (so it won't go off screen)
+    let newLeft = window.innerWidth - memeImage.offsetWidth - 1;
+    // sets max top value to the limits of the viewable screen (so it won't go off screen)
+    let newTop = window.innerHeight - memeImage.offsetHeight - 1;
+    // changing CSS properties for the image and generates random value for newLeft
+    memeImage.style.left = Math.floor(Math.random() * newLeft) + 'px';
+    // changing CSS properties for the image and generates random value for newTop
+    memeImage.style.top = Math.floor(Math.random() * newTop) + 'px';
+    
+    console.log("left=" + newLeft + "px");
+    console.log("top=" + newTop + "px");
+    }, 1000);  // 1000 is ni miliseconds - 1000 miliseconds is 1 second //
 }
-// Stops memeImage movement and resets its position to default
+// function to stop the image from moving
 function stopMovement(){
-    stopButton.disabled = true;
-    startButton.disabled = false;
-
-    clearInterval(moveInterval);
+    // set it up so that we cannot click on the start button
+    document.getElementById("startButton").disabled = false;
+    document.getElementById("stopButton").disabled = true;
+    // stop the image from moving and return it to the default position
+    clearInterval(intervalID);
     memeImage.style.top = defaultTop + 'px';
     memeImage.style.left = defaultLeft + 'px';
 }
@@ -31,7 +41,6 @@ function stopMovement(){
 function playZeblor() {
         window.location.href = "https://www.construct.net/en/free-online-games/zeblor-mystic-journey-doom-78664/play"
     }
-
 function validateForm(){
     // get the users first name so we can validate it
     let firstName = document.getElementById("txtFirstName").value;
