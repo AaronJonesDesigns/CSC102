@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="Main.css">
+</head>
+<body>
+    <header>
+        <!-- TODO: add header with menu here -->
+        <h1>Palindrome Checker</h1>
+        <!-- This is the navigation menu section -->
+        <nav>
+                
+            <!-- The a tag is the anchor tag - it creates a hyperlink -->
+            <a href="Index.html">Home</a> &nbsp;
+            <br>
+            <a href="Boards.html">Boards</a>
+            <br>
+            <a href="Game.html">Game</a>
+            <br>
+            <a href="strings.html">Login</a>
+            <br>
+            <a href="palindrome.html">Palindrome</a>
+            </nav>
+    </header>
+
+    <main>
+        <!-- Basics of setting up a form so that when the form is submitted we will check if the word is the same forward and back -->
+        <form name="frmPalindrome" id="frmPalindrome" onsubmit="checkPalindrome(event);">
+            <label for="txtWord">Enter a word or phrase</label>
+            <input type="text" id="txtWord" name="txtWord"><br>
+            <input type="submit" value="Check Word">
+        </form>
+        <div id="divPalinResults"></div>
+    </main>
+
+    <!-- TODO: Move to Code.js -->
+    <script>
+        function checkPalindrome(event){
+            // Prevent the form from submitting 
+            event.preventDefault();
+
+            // Create a shortcut to the txtWord user input
+            let userInput = document.getElementById("txtWord").value;
+
+            // create shorcut to the output div
+            let divPalinResults = document.getElementById("divPalinResults");
+
+            // set up a variable to hold if the word is a palindrome or not
+            let isPalin = isPalindrome(userInput);
+
+            // this is equivalent to isPalin == true
+            if (isPalin){
+                divPalinResults.textContent = userInput + " is a palindrome!"
+            }
+            // this is not a Palindrome
+            else{
+                divPalinResults.textContent = userInput + " is not a palindrome!"
+            }
+
+        }
+        // Function to see if the string is a palindrome
+        // stringToTest is what the user entered
+        function isPalindrome(stringToTest){
+            // convert the string to test to lowercase because I think that is a better user experience
+            stringToTest = stringToTest.toLowerCase();
+            
+            // set up a variable to reverse the contents of and set it to the original string
+            let stringToReverse = stringToTest;
+
+            // convert the string to an array (each letter in their own slot)
+            // reverse the contents of our new array (run the letter is the reverese order)
+            // then join the array so it becomes a backwards string
+            stringToReverse = stringToReverse.split("").reverse().join("");
+
+            // compare the original string to the backwards string
+            // you can use == or ===
+            if (stringToTest == stringToReverse){
+                // return true to the calling code
+                return true;
+            }
+            
+            // as a default, return false
+            return false;
+
+        }
+
+
+        // this is testing Mom == moM - JS is case sensitive, so these values do not match
+
+
+    </script>
+
+</body>
+</html>
