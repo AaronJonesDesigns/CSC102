@@ -23,19 +23,26 @@
             <br>
             <a href="palindrome.html">Palindrome</a>
         </nav>
-    </header>  
     </header>
-    <!-- Text to appear on the page explaining how to ensure the best user experience, once the game starts -->
-    Click the button below to play the<br>
-    Zeblor and Mystic Journey of Doom demo!<br><br>    
-    For the best play experience<br>
-    click the "Go Fullscreen" button<br>
-    found in the bottom right corner.<br>
-    <br>
-    Enjoy!<br>
-    <br>
-    <!-- This line creates a button sets the function playZeblor and tells the text which will appear on the button -->
-    <button onclick="playZeblor()">Play Zeblor</button>
+
+    <main>
+        <!-- Text to appear on the page explaining how to ensure the best user experience, once the game starts -->
+        Click the button below to play the<br>
+        Zeblor and Mystic Journey of Doom demo!<br><br>
+        For the best play experience<br>
+        click the "Go Fullscreen" button<br>
+        found in the bottom right corner.<br>
+        <br>
+        Enjoy!<br>
+        <br>
+        <!-- This line creates a button sets the function playZeblor and tells the text which will appear on the button -->
+    <button onclick="playZeblor();">Play Zeblor</button>
+    <button onclick="addSound();" id="btnAddSound">Zeblor Music</button>
+    <br><br>
+    <button onclick="playSound();" id="btnPlay" hidden="true">Play ZaMJoD Theme</button>
+    <br><br>
+    <button onclick="pauseSound();" id="btnPause" hidden="true">Pause ZaMJoD Theme</button>
+    <br><br>
 
     <footer>
         <!-- <br> creates a line -->

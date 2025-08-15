@@ -96,3 +96,126 @@ function validateForm(){
     //prevent the form from submitting 
     return false;
 }
+function checkPalindrome(event){
+    // Prevent the form from submitting 
+    event.preventDefault();
+
+    // Create a shortcut to the txtWord user input
+    let userInput = document.getElementById("txtWord").value;
+
+    // create shorcut to the output div
+    let divPalinResults = document.getElementById("divPalinResults");
+
+    // set up a variable to hold if the word is a palindrome or not
+    let isPalin = isPalindrome(userInput);
+
+    // this is equivalent to isPalin == true
+    if (isPalin){
+        divPalinResults.textContent = userInput + " is a palindrome!"
+    }
+    // this is not a Palindrome
+    else{
+        divPalinResults.textContent = userInput + " is not a palindrome!"
+    }
+
+}
+// Function to see if the string is a palindrome
+// stringToTest is what the user entered
+function isPalindrome(stringToTest){
+    // convert the string to test to lowercase because I think that is a better user experience
+    stringToTest = stringToTest.toLowerCase();
+            
+    // set up a variable to reverse the contents of and set it to the original string
+    let stringToReverse = stringToTest;
+
+    // convert the string to an array (each letter in their own slot)
+    // reverse the contents of our new array (run the letter is the reverese order)
+    // then join the array so it becomes a backwards string
+    stringToReverse = stringToReverse.split("").reverse().join("");
+
+    // compare the original string to the backwards string
+    // you can use == or ===
+    if (stringToTest == stringToReverse){
+        // return true to the calling code
+        return true;
+    }
+            
+    // as a default, return false
+    return false;
+
+}
+// Sound functions
+// function to add an audio element
+function addSound(){
+    // shortcut to play button
+    let btnPlay = document.getElementById("btnPlay");
+    // shortcut to play button
+    let btnPause = document.getElementById("btnPause");
+    // shortcut to add sound button
+    let btnAddSound = document.getElementById("btnAddSound");
+    // create an audio element
+    let audZeblor = document.createElement("audio");
+
+    // give the audio element an id
+    audZeblor.setAttribute("id", "audZeblor");
+
+    // set up the source for the audio file
+    audZeblor.setAttribute("src", "Ludum Dare 30 04.ogg");
+
+    document.body.appendChild(audZeblor);
+
+    // add controls attribute
+    // audZeblor.setAttribute("controls", "controls"); //
+
+    // unhide btnPlay
+    btnPlay.hidden = false;
+    
+    // unhide btnPlay
+    btnPause.hidden = false;
+    
+    //disable btnPause
+    btnPause.disabled = true;
+
+    // hide btnAddSound
+    btnAddSound.hidden = true;
+
+//function to start playing the audio element
+}
+
+function playSound(){
+    //shortcut to audio element that we created
+    let audio = document.getElementById("audZeblor");
+
+    // play the audio
+    audio.play();
+
+    //call the function instead to disable/enable buttons
+    manageButtons(true, false);
+}
+
+// function to pause audio
+function pauseSound(){
+    //shortcut to audio element that we created
+    let audio = document.getElementById("audZeblor");
+
+    // play the audio
+    audio.pause();
+
+    //call the function instead to disable/enable buttons
+    manageButtons(false, true);
+}
+
+// function to manage the buttons
+function manageButtons(disableplay, disablePause){
+    // shortcut to play button
+    let btnPlay = document.getElementById("btnPlay");
+    
+    // shortcut to play button
+    let btnPause = document.getElementById("btnPause");
+
+     // enable btnPlay
+    btnPlay.disabled = disableplay;
+    
+    // disable btnPlay
+    btnPause.disabled = disablePause;
+}
