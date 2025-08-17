@@ -95,7 +95,7 @@ function validateForm(){
     }
     //prevent the form from submitting 
     return false;
-
+}
 function validateFeedback() {
     // get the users inputs and comments from the feedbackForm element
     let form = document.getElementById("feedbackForm");
@@ -103,6 +103,7 @@ function validateFeedback() {
     let formData = new FormData(form);
     // silly man holding our results
     let results = {};
+
     // loop through each key-value pair (example: fun question, 4 or music 3) contained in the formData and store the results as entry
     for (let entry of formData.entries()) {
         // grabs the first element of the array. The question "name" (fun, challenge, music, art, recommend)
@@ -112,10 +113,10 @@ function validateFeedback() {
         // key and value pairs are stored as the loop continues for each question.
         results[key] = value;
     }
-    // Show the results in the browser console
-    console.log(results);
-    //prevent submitting
-    return false; 
+     // Show the results in the browser console as a table.
+    console.table(results);
+    // prevent form from submitting
+    return false;
 }
 function checkPalindrome(event){
     // Prevent the form from submitting 
@@ -239,5 +240,5 @@ function manageButtons(disableplay, disablePause){
     
     // disable btnPlay
     btnPause.disabled = disablePause;
-    }
 }
+

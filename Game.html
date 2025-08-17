@@ -37,20 +37,21 @@
     <button onclick="playSound();" id="btnPlay" hidden="true">Play ZaMJoD Theme</button>
     <br><br>
     <button onclick="pauseSound();" id="btnPause" hidden="true">Pause ZaMJoD Theme</button>
-
+    <!-- h2 to contain the game rating section -->
     <h2 id="feedback">Please rate my game!</h2>
+        <!-- rating explanation to the user -->
         <p>Click the radio button that best describes how you feel about each question.<br>
             1 - Bleh!  2 - Meh  3 - Hmm  4 - 'spose  5 - Yeah!</p>
-    
+
+    <!-- Create a form -->
     <form id="feedbackForm" onsubmit="return validateFeedback()">
-        <div id="message">
+
         <p>Did you enjoy Zeblor?</p>       
             <input type="radio" name="fun" value="1">1</input>
             <input type="radio" name="fun" value="2">2</input>
             <input type="radio" name="fun" value="3">3</input>
             <input type="radio" name="fun" value="4">4</input>
             <input type="radio" name="fun" value="5">5</input><br>
-
         <p>Was the challenge level appropriate?</p>       
             <input type="radio" name="challenge" value="1">1</input>
             <input type="radio" name="challenge" value="2">2</input>
@@ -74,7 +75,7 @@
             <input type="radio" name="recommend" value="2">2</input>
             <input type="radio" name="recommend" value="3">3</input>
             <input type="radio" name="recommend" value="4">4</input>
-            <input type="radio" name="recommend" value="5">5</input><br>
+            <input type="radio" name="recommend" value="5">5</input><br><br>
 
         <!-- label - use with form inputs to explain what information is needed to the user & screen reader -->
         <label for="txtFeedback">If you have addition thoughts, please provide them here: </label><br>
