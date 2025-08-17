@@ -39,38 +39,46 @@
     <button onclick="pauseSound();" id="btnPause" hidden="true">Pause ZaMJoD Theme</button>
     <!-- h2 to contain the game rating section -->
     <h2 id="feedback">Please rate my game!</h2>
-        <!-- rating explanation to the user -->
-        <p>Click the radio button that best describes how you feel about each question.<br>
-            1 - Bleh!  2 - Meh  3 - Hmm  4 - 'spose  5 - Yeah!</p>
-
-    <!-- Create a form -->
+    <!-- Create the feedbackForm -->
     <form id="feedbackForm" onsubmit="return validateFeedback()">
-
-        <p>Did you enjoy Zeblor?</p>       
+        <!-- create label for the question -->
+        <label for="radQuestion">Click the radio button that best describes how you feel about each question.<br>
+            1 - Bleh!  2 - Meh  3 - Hmm  4 - 'spose  5 - Yeah!</label>
+        <!-- Question number 1 (fun) -->
+        <p>Did you enjoy Zeblor?</p>
+            <!-- create radio buttons and keep the "fun" inputs grouped -->
             <input type="radio" name="fun" value="1">1</input>
             <input type="radio" name="fun" value="2">2</input>
             <input type="radio" name="fun" value="3">3</input>
             <input type="radio" name="fun" value="4">4</input>
             <input type="radio" name="fun" value="5">5</input><br>
-        <p>Was the challenge level appropriate?</p>       
+            <!-- Question number 2 (challenge)-->
+        <p>Was the challenge level appropriate?</p>
+            <!-- create radio buttons and keep the "challenge" inputs grouped  -->    
             <input type="radio" name="challenge" value="1">1</input>
             <input type="radio" name="challenge" value="2">2</input>
             <input type="radio" name="challenge" value="3">3</input>
             <input type="radio" name="challenge" value="4">4</input>
             <input type="radio" name="challenge" value="5">5</input><br>
-        <p>Did you enjoy the music?</p>       
+            <!-- Question number 3 (music) -->
+        <p>Did you enjoy the music?</p>
+            <!-- create radio buttons and keep the "music" inputs grouped  -->        
             <input type="radio" name="music" value="1">1</input>
             <input type="radio" name="music" value="2">2</input>
             <input type="radio" name="music" value="3">3</input>
             <input type="radio" name="music" value="4">4</input>
             <input type="radio" name="music" value="5">5</input><br>
-        <p>Did the art style enhance the experience?</p>       
+            <!-- Question number 4 (art) -->
+        <p>Did the art style enhance the experience?</p>
+            <!-- create radio buttons and keep the "art" inputs grouped  -->      
             <input type="radio" name="art" value="1">1</input>
             <input type="radio" name="art" value="2">2</input>
             <input type="radio" name="art" value="3">3</input>
             <input type="radio" name="art" value="4">4</input>
             <input type="radio" name="art" value="5">5</input><br>
-        <p>Would you recommend Zeblor to your friends?</p>       
+            <!-- Question number 5 (recommend) -->
+        <p>Would you recommend Zeblor to your friends?</p>
+            <!-- create radio buttons and keep the "recommend" inputs grouped  -->      
             <input type="radio" name="recommend" value="1">1</input>
             <input type="radio" name="recommend" value="2">2</input>
             <input type="radio" name="recommend" value="3">3</input>
