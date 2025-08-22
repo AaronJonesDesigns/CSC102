@@ -26,6 +26,20 @@ body::before {
     background: rgba(255, 255, 255, 0.6);
     z-index: -1;
 }
+/* Override for game.html background image */
+body.game-page {
+  background: black url('Background.png') center/cover no-repeat;
+}
+/* Makes game.html text smaller */
+body.game-page h2{
+  font-size: 24px;
+  line-height: 1.4;
+}
+/* Makes game.html text smaller */
+body.game-page h3 {
+  font-size: 21px;
+  line-height: 1.4;
+}
 /* Navigation */
 nav {
     height: 600px;
@@ -68,6 +82,18 @@ footer .disclaimer {
     left: 300px;
     width: 400px;
     transition: top 0.3s, left 0.3s;
+}
+/* font size override for feedback form */
+#feedbackForm {
+    font-size: 15px;
+}
+/* feedback string input size override */
+#txtFeedback {
+    width: 600px;
+    height: 50px;
+    padding: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 /* Headings */
 h1 {

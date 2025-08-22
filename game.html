@@ -4,97 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Function Demo</title>
+    <link rel="stylesheet" href="main.css">
+    <body class="game-page"></body>
 </head>
-<!-- added a <style> section to this page so that the background image is different.
-I'm sure there is a better way to do this, I'm just not sure how. -->
-<style>
-    body {
-    color: rgb(0, 0, 0);
-    background-image: url('Background.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top;
-    position: relative;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    z-index: 0;
-    font-size: 14px;
-}
-/* Semi-transparent overlay */
-body::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.6);
-    z-index: -1;
-}
-/* Navigation */
-nav {
-    height: 600px;
-    width: 200px;
-    float: left;
-    padding: 50px;
-    line-height: 30px;
-    font-size: 18px;
-}
-/* style for home button */
-.home-btn {
-  width: 40px;
-  height: 40px;
-  vertical-align: middle;
-}
-/* Footer */
-footer {
-    text-align: center;
-    margin-right: 200px;
-    position: fixed;
-    bottom: 1%;
-    width: 100%;
-    font-size: 12px;
-}
-/* AI-generated content disclaimer style */
-footer .disclaimer {
-  font-size: 0.75rem;
-  color: #666;
-  margin-top: 10px;
-  font-style: italic;
-}
-
-/* Image */
-#memeImage {
-    position: absolute;
-    top: 220px;
-    left: 300px;
-    width: 400px;
-    transition: top 0.3s, left 0.3s;
-}
-
-#ackMessage {
-    margin-top: 10px;
-    color: green;
-    font-weight: bold;
-    font-size: 30px; 
-    text-align: center;
-}
-/* feedback text box resizing  */
-#txtFeedback {
-  width: 600px; 
-  height: 60px;     
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-/* Headings */
-h1 {
-    text-align: center;
-    font-size: 40px;
-    padding: 20px;
-    margin: 0;
-}
-</style>
 
 <body>
     <header>
@@ -122,8 +34,8 @@ h1 {
     </header>
     <main>
         <h2><!-- Text to appear on the page explaining how to ensure the best user experience, once the game starts -->
-            Click the button below to play the Zeblor and Mystic Journey of Doom demo!<br><br>
-            For the best play experience click the "Go Fullscreen" button found in the bottom right corner.<br><br>
+            Click the button below to play the Zeblor and Mystic Journey of Doom demo!<br>
+            For the best play experience click the "Go Fullscreen" button found in the bottom right corner.<br>
         </h2>
         <!-- This line creates a button sets the function playZeblor and tells the text which will appear on the button -->
     <button onclick="playZeblor();">Play Zeblor</button>
@@ -131,7 +43,7 @@ h1 {
     <button onclick="playSound();" id="btnPlay" hidden="true">Play ZaMJoD Theme</button>
     <button onclick="pauseSound();" id="btnPause" hidden="true">Pause ZaMJoD Theme</button>
     <!-- h2 to contain the game rating section -->
-        <h2 id="feedback">Please rate my game!</h2>
+        <h3 id="feedback">Please rate my game!</h3>
         <!-- Create the feedbackForm -->
         <form id="feedbackForm" onsubmit="return validateFeedback()">
             <!-- create label for the question -->
@@ -178,12 +90,13 @@ h1 {
                 <input type="radio" name="recommend" value="4">4</input>
                 <input type="radio" name="recommend" value="5">5</input><br><br>
 
-        <!-- label - use with form inputs to explain what information is needed to the user & screen reader -->
-        <label for="txtFeedback">If you have addition thoughts, please provide them here: </label><br><br>
-        <!-- text box for users to provide feedback -->
-        <input type="text" id="txtFeedback" name="txtFeedback" placeholder="Feedback is appreciated!"><br><br>
-        <input type="submit" value="Submit">
-    </form>
+            <!-- label - use with form inputs to explain what information is needed to the user & screen reader -->
+            <label for="txtFeedback">If you have addition thoughts, please provide them here: </label><br><br>
+            <!-- text box for users to provide feedback -->
+            <input type="text" id="txtFeedback" name="txtFeedback" placeholder="Feedback is appreciated!"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        </h3>
     <!-- div for acknowledgement message for user -->
     <div id="ackMessage"></div>
     <script src="code.js"></script>
