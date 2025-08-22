@@ -54,7 +54,14 @@ nav {
   height: 40px;
   vertical-align: middle;
 }
+/* style for Project: Uniform Sierra button/link */
 .NatandAiko-btn {
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+}
+/* style for Zeblor button/link */
+.Background-btn {
   width: 80px;
   height: 80px;
   vertical-align: middle;

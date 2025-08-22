@@ -5,7 +5,7 @@ let defaultTop = 240;
 // default location variable allows the stopMovement function to move the image back to the starting left position
 let defaultLeft = 300;
 let intervalID = 0;
-
+// external website link
 function oldSiteLink() {
         window.location.href = "https://aajones79.wixsite.com/aaronsjonesdesigns"
     }
