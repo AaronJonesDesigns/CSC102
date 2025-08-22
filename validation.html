@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palindrome Checker</title>
+    <title>Input Validation</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
         <!-- TODO: add header with menu here -->
-        <h1>Palindrome Checker</h1>
+        <h1>User Validation</h1>
         <!-- This is the navigation menu section -->
        <nav>
             <!-- Add home button to the top of my nav section -->
@@ -17,7 +17,7 @@
                 <img src="home.jpg" alt="Home" style="width:40px; height:40px; vertical-align:middle;">
             </a>
             <br><br>
-            <a href="meme.html">Meme</a>.
+            <a href="meme.html">Meme</a>
             <br>
             <a href="game.html">Game</a>
             <br>
@@ -31,18 +31,35 @@
             <br>
         </nav>
     </header>
-
     <main>
-        <!-- Basics of setting up a form so that when the form is submitted we will check if the word is the same forward and back -->
-        <form name="frmPalindrome" id="frmPalindrome" onsubmit="checkPalindrome(event);">
-            <label for="txtWord">Enter a word or phrase</label>
-            <input type="text" id="txtWord" name="txtWord"><br>
-            <input type="submit" value="Check Word">
-        </form>
-        <div id="divPalinResults"></div>
-    </main>
+        <h2>Zeblor needs to validate your existance on this planet.  Please fill out the form below.</h2>
+        <div id="divMessage"></div>
+        <br>
+        <!-- the post option for method is secure, if used in combination with https; then run the onsubmit functions specified when the form is submitted -->
+        <form method="post" onsubmit="return validateForm();">
+            <!-- label - use with form inputs to explain what information is needed to the user & screen reader -->
+            <label for="txtFirstName">First Name: </label>
+            <!-- text box for users first name -->
+            <input type="text" id="txtFirstName" name="txtFirstName" placeholder="First Name">
+            <br><br>
 
+            <!-- label for last name -->
+            <label for="txtLastName">Last Name: </label>
+            <!-- text box for last name -->
+            <input type="text" id="txtLastName" name="txtLastName" placeholder="Last Name">
+            <!-- Line break; better to do this with CSS -->
+            <br><br>
+
+            <label for="txtZip">Zip Code: </label>
+            <!-- text input for the user's favorite color -->
+            <input type="text" id="txtZip" name="txtZip" placeholder="Zip Code">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <!-- Link to JavaScript code -->
     <script src="code.js"></script>
+
     <footer>
         <!-- <br> creates a line -->
         Aaron S. Jones<br>
